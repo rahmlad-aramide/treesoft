@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Treesoft Academy - Transform Your Tech Journey',
   description: 'Empowering the next generation of tech professionals through innovative, hands-on learning experiences.',
+  metadataBase: new URL('https://treesoft.vercel.app'),
 }
 
 

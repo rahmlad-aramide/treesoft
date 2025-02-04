@@ -4,7 +4,7 @@ import { GraduationCap } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t bg-background">
-      <div className="container py-8 md:py-12">
+      <div className="px-4 md:container py-8 md:py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
