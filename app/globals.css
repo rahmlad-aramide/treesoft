@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+.outlined-text {
+  font-family: inherit, sans-serif;
+  -webkit-text-stroke: 0.5px #013201;
+  -webkit-text-fill-color: transparent;
+  /* letter-spacing: 5px; */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Blog Content Styling */
+
+.blog-content {
+  /* Basic styling for the blog content */
+  font-family: sans-serif; /* Choose a suitable font */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Darkish gray text color */
+}
+
+.blog-content h2 {
+  /* Styling for h2 headings */
+  font-size: 1.8rem; /* Adjust size as needed */
+  font-weight: 600; /* Slightly bolder */
+  margin-top: 1.5rem; /* Space above h2 */
+  margin-bottom: 0.8rem; /* Space below h2 */
+  color: #222; /* Darker heading color */
+}
+
+.blog-content p {
+  /* Styling for paragraphs */
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+.blog-content ul {
+  /* Styling for unordered lists */
+  list-style-type: disc; /* Use bullet points */
+  padding-left: 20px; /* Indent the list items */
+  margin-bottom: 1rem;
+}
+
+.blog-content li {
+  /* Styling for list items */
+  margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Example of adding more specific styling if needed */
+.blog-content a {
+  color: #007bff; /* Example link color */
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* If you want to style the Card component specifically */
+.blog.p-8 { /* Or whatever your Card class is */
+    padding: 2rem; /* Example padding, adjust as needed */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    background-color: #fff; /* Or a light background color */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .blog-content h2 {
+    font-size: 1.5rem;
+  }
+  .blog.p-8 {
+      padding: 1.5rem;
+  }
+}
+
+/* Dark mode styles */
+.dark .blog-content {
+  color: #eee; /* Light text color in dark mode */
+}
+
+.dark .blog-content h2 {
+  color: #fff; /* White heading color in dark mode */
+}
+
+.dark .blog-content a {
+  color: #66a5ff; /* Lighter link color in dark mode */
+}
+
+.dark .blog-content a:hover {
+  text-decoration: underline;
+}
+
+.dark .blog.p-8 {
+    background-color: #121212; /* Dark background color */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .blog-content h2 {
+    font-size: 1.5rem;
+  }
+  .blog.p-8 {
+      padding: 1.5rem;
+  }
+}
